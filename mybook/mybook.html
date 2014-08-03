@@ -1,0 +1,262 @@
+<head>
+    <title>Tada My Book title</title>
+<link href="public/flipclock.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    {{>main}}
+
+
+</body>
+<template name="hello2">
+    Hi2, test me if browser cache broken
+</template>
+
+<template name="main">
+
+    <div class="container">
+        <div id="innercontainer">
+            <div class="row clearfix">
+                <div class="col-md-2 column">
+                    <img alt="140x140" src="http://shirta.de/media/catalog/product/cache/1/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/b/i/birne-black-d75401105.png" width="50" />
+                </div>
+                <div class="col-md-6 column">
+                    <h3>
+				{{helloMeteor}}
+			</h3>
+                </div>
+                <div class="col-md-4 column">
+                    <h3>
+				<div class="flipclock"></div>
+
+<script type="text/javascript">
+	var clock = $('.flipflipclock').FlipClock({
+		clockFace: 'TwentyFourHourClock'
+	});
+</script>
+			</h3>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                            </button> <a class="navbar-brand" href="#">Agile Code Camp</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+                                    <a href="#">iFreezer</a>
+                                </li>
+                                <li>
+                                    <a href="#">iDeicer</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Setting</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">iOven</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">iToaster</a>
+                                        </li>
+                                        <li class="divider">
+                                        </li>
+                                        <li>
+                                            <a href="#">iMe</a>
+                                        </li>
+                                        <li class="divider">
+                                        </li>
+                                        <li>
+                                            <a href="#">One more thing</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <form role="form" id="ddrop">
+                                        <input type="submit" value="Drop">
+                                    </form>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Action</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Another action</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Something else here</a>
+                                        </li>
+                                        <li class="divider">
+                                        </li>
+                                        <li>
+                                            <a href="#">Agile Code Camp</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-8 column">
+                    <div class="jumbotron">
+                        <h2>
+					Hello Meteor world!
+				</h2>
+                        <p>
+                            This is the iFridge, followed by the tutorials mostly and added some own personal insights. Still under development...
+                        </p>
+                        <p>
+                            <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                        </p>
+                    </div>
+                    <h2>Who should do what?</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Familymember
+                                </th>
+                                <th>
+                                    ToDo
+                                </th>
+                                <th>
+                                    hours
+                                </th>
+                                <th>
+                                    Deadline
+                                </th>
+                                <th>
+                                    Done?
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each todos}}
+                            <tr>
+                                <td>
+                                    {{member}}
+                                </td>
+                                <td>
+                                    {{todo}}
+                                </td>
+                                <td>
+                                    {{hours}}
+                                </td>
+                                <td>
+                                    {{deadline}}
+                                </td>
+                                <td>
+                                    {{done}}
+                                </td>
+                            </tr>
+                            {{/each}}
+
+                        </tbody>
+                    </table>
+
+                    <form role="form" id="todoform">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" name="member" value="who?" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="todo" value="what" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="hours" value="5" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="deadline" value="2014-08-05 21:00:00" />
+                                </td>
+                                <td>
+                                    <input type="hidden" class="form-control" name="status" value="false" />
+
+                                </td>
+                            </tr>
+                        </table>
+
+                        <input type="submit" class="btn btn-default" name="submittodo" id="submittodo" value="Create" />
+                    </form>
+
+                </div>
+                <div class="col-md-4 column">
+                    <h3>
+				To Buy List:
+			</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    To Buy
+                                </th>
+                                <th>
+                                    for who
+                                </th>
+                                <th>
+                                    .
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {{#each posts}}
+
+
+                            <tr class="info">
+                                <td>
+                                    {{text}}
+                                </td>
+                                <td>
+                                    {{author}}
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    <form role="form" id="tobuyform">
+                        <div class="form-group">
+                            <label for="text">To Buy</label>
+                            <input type="text" class="form-control" name="text" />
+                        </div>
+
+
+                        <input type="submit" class="btn btn-default" value="Add" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</template>

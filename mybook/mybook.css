@@ -1,0 +1,25 @@
+h2, h3 {
+    font-family:'Lobster', cursive;
+}
+body {
+    background-image:url('http://www.innovatist.org/wp-content/uploads/2014/06/bg-4-2.jpg');
+    background-color:#443355;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+body {
+    background-color: transparent;
+}
+html {
+    margin: 10px;
+    padding: 10px;
+}
+div.container {
+    background: rgba(250, 250, 250, 0.8);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+#innercontainer {
+}
+
